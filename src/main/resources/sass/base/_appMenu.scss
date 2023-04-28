@@ -1,0 +1,96 @@
+#menuBackground_frame {
+  background-color: $dark-grey;
+}
+
+#topLogoInfo_frame {
+  background-color: $dark-grey;
+}
+
+#topLogo_frame {
+  background-color: $dark-grey;
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/o_logo_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#lbl_titleApp {
+  font-size: 12pt;
+  color: $white;
+}
+
+#lbl_subtitleApp {
+  font-size: 8pt;
+  color: $white;
+}
+
+#btn_toggle {
+  background-color: $dark-grey;
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/icon_menu.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  border: none;
+  border-left: 20px solid transparent;
+  text-align: left;
+  padding-left: 44px;
+  &:hover {
+    background-color: $grey;
+  }
+  &:pressed {
+    background-color: $light-grey;
+  }
+}
+#menu_frame, #topMenu_frame, #bottomMenu_frame, #btn_settings {
+  background-color: $dark-grey;
+}
+
+#topMenu_frame {
+  & QPushButton {
+    background-color: $dark-grey;
+    background-repeat: no-repeat;
+    background-position: left center;
+    border: none;
+    border-left: 20px solid transparent;
+    text-align: left;
+    padding-left: 44px;
+    &:hover {
+    background-color: $grey;
+    }
+    &:pressed {
+      background-color: $light-grey;
+    }
+  }
+}
+
+#btn_home {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/cil-home.png");
+}
+
+#btn_project {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/cil-folder-open.png");
+}
+
+#btn_company {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/cil-people.png");
+}
+
+#btn_plan {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/cil-library.png");
+}
+
+#btn_dispatch {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/cil-paper-plane.png");
+}
+
+#btn_archive {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/cil-save.png");
+}
+
+#btn_settings {
+  background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/icon_settings.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  border: none;
+  border-left: 20px solid transparent;
+  text-align: left;
+  padding-left: 44px;
+}

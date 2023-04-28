@@ -1,0 +1,33 @@
+#topBarBackground_frame {
+  background-color: $dark-grey;
+}
+
+#topBarLeftBox_frame {
+  background-color: $dark-grey;
+}
+
+#lbl_topBarLeftBoxTitle {
+  padding-left: 10px;
+  color: $white;
+  background-color: transparent;
+}
+
+#topBarRightBox_frame {
+  background-color: $dark-grey;
+  padding-right: 5px;
+  & QPushButton {
+    background-color: $dark-grey;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+      background-color: $grey;
+      border-style: solid;
+      border-radius: 4px;
+    }
+    &:pressed {
+      background-color: $light-grey;
+      border-style: solid;
+      border-radius: 4px;
+    }
+  }
+}
