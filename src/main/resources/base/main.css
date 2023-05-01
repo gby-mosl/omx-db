@@ -2,6 +2,148 @@ QWidget {
   background-color: #fff;
 }
 
+QPushButton {
+  background-color: #006fc7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+}
+QPushButton:hover {
+  background-color: #2ea3ff;
+}
+QPushButton:pressed {
+  background-color: #0061ae;
+}
+
+QLineEdit {
+  background-color: #59595b;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14pt;
+  min-height: 30px;
+}
+QLineEdit:hover {
+  border: 3px solid #727274;
+}
+QLineEdit:focus {
+  border: 3px solid #2ea3ff;
+}
+
+QLabel {
+  background-color: #404041;
+  color: #d9d9da;
+  font-size: 11pt;
+}
+
+QListWidget {
+  background-color: #59595b;
+  color: #fff;
+  font-size: 14pt;
+  border-radius: 5px;
+}
+QListWidget::item:hover {
+  background: #727274;
+}
+QListWidget::item:selected {
+  color: #fff;
+  background: #006fc7;
+}
+
+QTableWidget {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 3px;
+  gridline-color: #f5bb22;
+  border-bottom: 1px solid #333334;
+}
+QTableWidget::horizontalHeader {
+  background-color: #f5bb22;
+  color: #fff;
+}
+QTableWidget::item {
+  border: 1px solid #8c8c8e;
+}
+
+QHeaderView::section {
+  background-color: #404041;
+  color: #fff;
+  min-width: 100px;
+  border-style: none;
+  border: 1px solid #8c8c8e;
+}
+
+QScrollBar {
+  border: none;
+  background-color: #333334;
+  margin: 0;
+}
+QScrollBar:horizontal {
+  height: 8px;
+}
+QScrollBar:vertical {
+  width: 8px;
+}
+QScrollBar::handle {
+  background-color: #006fc7;
+  border-radius: 4px;
+}
+QScrollBar::handle:horizontal {
+  min-width: 25px;
+}
+QScrollBar::handle:vertical {
+  min-height: 25px;
+}
+QScrollBar::add-line {
+  border: none;
+  background-color: #333334;
+}
+QScrollBar::add-line:horizontal {
+  width: 20px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  subcontrol-position: right;
+  subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical {
+  height: 20px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+QScrollBar::sub-line {
+  border: none;
+  background-color: #333334;
+}
+QScrollBar::sub-line:horizontal {
+  width: 20px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  subcontrol-position: left;
+  subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical {
+  height: 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+QScrollBar::up-arrow {
+  background-color: transparent;
+}
+QScrollBar::down-arrow {
+  background-color: transparent;
+}
+QScrollBar::add-page {
+  background-color: transparent;
+}
+QScrollBar::sub-page {
+  background-color: transparent;
+}
+
+QRadioButton {
+  background-color: #404041;
+  color: #fff;
+}
+
 #menuBackground_frame {
   background-color: #2b2b2c;
 }
@@ -18,21 +160,25 @@ QWidget {
 }
 
 #lbl_titleApp {
+  background-color: #2b2b2c;
   font-size: 12pt;
   color: #fff;
 }
 
 #lbl_subtitleApp {
-  font-size: 8pt;
+  background-color: #2b2b2c;
+  font-size: 12pt;
   color: #fff;
 }
 
 #btn_toggle {
+  color: #fff;
   background-color: #2b2b2c;
   background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/icon_menu.png");
   background-repeat: no-repeat;
   background-position: left center;
   border: none;
+  border-radius: 0px;
   border-left: 20px solid transparent;
   text-align: left;
   padding-left: 44px;
@@ -49,6 +195,7 @@ QWidget {
 }
 
 #topMenu_frame QPushButton {
+  color: #fff;
   background-color: #2b2b2c;
   background-repeat: no-repeat;
   background-position: left center;
@@ -89,6 +236,7 @@ QWidget {
 }
 
 #btn_settings {
+  color: #fff;
   background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/icon_settings.png");
   background-repeat: no-repeat;
   background-position: left center;
@@ -132,7 +280,7 @@ QWidget {
   border-radius: 4px;
 }
 
-#contentBackground_frame {
+#contentBackground_frame, #content_frame, #container_frame, #stackedWidget {
   background-color: #404041;
 }
 
@@ -151,6 +299,51 @@ QWidget {
   background-color: #333334;
   padding-right: 5px;
   color: #fff;
+}
+
+#home_frame {
+  background-color: #404041;
+}
+
+#project_frame {
+  background-color: #404041;
+}
+
+#companyPage_frame,
+#company_frame,
+#companyList_frame,
+#companyForm_frame,
+#companyCityInfo_frame,
+#companyPostCode_frame,
+#companyCity_frame,
+#contact_frame,
+#contactList_frame,
+#contactForm_frame,
+#contactStatus_frame,
+#contactType_frame {
+  background-color: #404041;
+}
+
+#company_frame,
+#contact_frame {
+  border: 1px solid #59595b;
+  border-radius: 10px;
+}
+
+#dispatch_frame {
+  background-color: #404041;
+}
+
+#plan_frame {
+  background-color: #404041;
+}
+
+#archive_frame {
+  background-color: #404041;
+}
+
+#settings_frame {
+  background-color: #404041;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,14 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import QSize, Qt, QRect
 from PySide6.QtGui import QCursor, QPixmap
 
+from package.ui.ui_home import *
+from package.ui.ui_project import *
+from package.ui.ui_company import *
+from package.ui.ui_plan import *
+from package.ui.ui_dispatch import *
+from package.ui.ui_archive import *
+from package.ui.ui_settings import *
+
 class Ui_MainWindow(object):
     def setup_ui(self, MainWindow):
         if not MainWindow.objectName():
@@ -15,7 +23,8 @@ class Ui_MainWindow(object):
 
         self.app_ui(MainWindow)
 
-
+    # APP UI
+    # /////////////////////////////////////////////////////////////////////////////////////////////////////
     def app_ui(self, MainWindow):
         self.appMargins_layout = QVBoxLayout(MainWindow.central_widget)
         self.appMargins_layout.setSpacing(0)
@@ -33,11 +42,14 @@ class Ui_MainWindow(object):
         self.appMenu_ui()
         self.appCentral_ui()
 
+    # APP MENU UI
+    # /////////////////////////////////////////////////////////////////////////////////////////////////////
     def appMenu_ui(self):
         self.menuBackground_frame = QFrame(self.app_frame)
         self.menuBackground_frame.setObjectName("menuBackground_frame")
         self.menuBackground_frame.setMinimumSize(QSize(60, 0))
         self.menuBackground_frame.setMaximumSize(QSize(60, 20000))
+
 
         self.app_layout.addWidget(self.menuBackground_frame)
 
@@ -52,6 +64,8 @@ class Ui_MainWindow(object):
 
         self.menuBackground_layout.addWidget(self.topLogoInfo_frame)
 
+        # TOP LOGO UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.topLogo_frame = QFrame(self.topLogoInfo_frame)
         self.topLogo_frame.setObjectName("topLogo_frame")
         self.topLogo_frame.setGeometry(QRect(10, 5, 42, 42))
@@ -71,6 +85,8 @@ class Ui_MainWindow(object):
         self.lbl_subtitleApp.setMaximumSize(QSize(20000, 16))
         self.lbl_subtitleApp.setAlignment(Qt.AlignLeading | Qt.AlignLeft | Qt.AlignTop)
 
+        # MENU UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.menu_frame = QFrame(self.menuBackground_frame)
         self.menu_frame.setObjectName("menu_frame")
 
@@ -80,6 +96,8 @@ class Ui_MainWindow(object):
         self.menu_layout.setContentsMargins(0, 0, 0, 0)
         self.menu_layout.setSpacing(0)
 
+        # BUTTON TOGGLE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.toggle_frame = QFrame(self.menu_frame)
         self.toggle_frame.setObjectName("toggle_frame")
         self.toggle_frame.setMaximumSize(QSize(20000, 45))
@@ -109,10 +127,14 @@ class Ui_MainWindow(object):
 
         self.menu_layout.addWidget(self.topMenu_frame, 0, Qt.AlignTop)
 
+        # TOP MENU UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.topMenu_layout = QVBoxLayout(self.topMenu_frame)
         self.topMenu_layout.setContentsMargins(0, 0, 0, 0)
         self.topMenu_layout.setSpacing(0)
 
+        # BUTTON HOME UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_home = QPushButton(self.topMenu_frame)
         self.btn_home.setObjectName("btn_home")
         self.btn_home.setText("Accueil")
@@ -124,9 +146,11 @@ class Ui_MainWindow(object):
 
         self.topMenu_layout.addWidget(self.btn_home)
 
+        # BUTTON PROJECT UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_project = QPushButton(self.topMenu_frame)
         self.btn_project.setObjectName("btn_project")
-        self.btn_project.setText("Projet")
+        self.btn_project.setText("Affaires")
         btn_sizePolicy.setHeightForWidth(self.btn_project.sizePolicy().hasHeightForWidth())
         self.btn_project.setSizePolicy(btn_sizePolicy)
         self.btn_project.setMinimumSize(QSize(0, 45))
@@ -135,6 +159,8 @@ class Ui_MainWindow(object):
 
         self.topMenu_layout.addWidget(self.btn_project)
 
+        # BUTTON COMPANY UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_company = QPushButton(self.topMenu_frame)
         self.btn_company.setObjectName("btn_company")
         self.btn_company.setText("Contacts")
@@ -146,6 +172,8 @@ class Ui_MainWindow(object):
 
         self.topMenu_layout.addWidget(self.btn_company)
 
+        # BUTTON PLAN UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_plan = QPushButton(self.topMenu_frame)
         self.btn_plan.setObjectName("btn_plan")
         self.btn_plan.setText("Plans")
@@ -157,6 +185,8 @@ class Ui_MainWindow(object):
 
         self.topMenu_layout.addWidget(self.btn_plan)
 
+        # BUTTON DISPATCH UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_dispatch = QPushButton(self.topMenu_frame)
         self.btn_dispatch.setObjectName("btn_dispatch")
         self.btn_dispatch.setText("Envois")
@@ -168,6 +198,8 @@ class Ui_MainWindow(object):
 
         self.topMenu_layout.addWidget(self.btn_dispatch)
 
+        # BUTTON ARCHIVE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_archive = QPushButton(self.topMenu_frame)
         self.btn_archive.setObjectName("btn_archive")
         self.btn_archive.setText("Archive")
@@ -179,6 +211,8 @@ class Ui_MainWindow(object):
 
         self.topMenu_layout.addWidget(self.btn_archive)
 
+        # BOTTOM MENUE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.bottomMenu_frame = QFrame(self.menu_frame)
         self.bottomMenu_frame.setObjectName("bottomMenu_frame")
 
@@ -188,6 +222,8 @@ class Ui_MainWindow(object):
         self.bottomMenu_layout.setContentsMargins(0, 0, 0, 0)
         self.bottomMenu_layout.setSpacing(0)
 
+        # BUTTON SETTINGS UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.btn_settings = QPushButton(self.bottomMenu_frame)
         self.btn_settings.setObjectName("btn_settings")
         self.btn_settings.setText("Réglages")
@@ -199,6 +235,8 @@ class Ui_MainWindow(object):
 
         self.bottomMenu_layout.addWidget(self.btn_settings)
 
+    # CENTRAL APP UI
+    # /////////////////////////////////////////////////////////////////////////////////////////////////////
     def appCentral_ui(self):
         self.centralBackground_frame = QFrame(self.app_frame)
         self.centralBackground_frame.setObjectName("centralBackground_frame")
@@ -209,10 +247,20 @@ class Ui_MainWindow(object):
         self.central_layout.setContentsMargins(0, 0, 0, 0)
         self.central_layout.setSpacing(0)
 
+        # INSERTING TOP BAR
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.topBar_ui()
+
+        # INSERTING CONTENT
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.content_ui()
+
+        # INSERTING BOTTOM BAR
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.bottomBar_ui()
 
+    # TOP BAR UI
+    # /////////////////////////////////////////////////////////////////////////////////////////////////////
     def topBar_ui(self):
         self.topBarBackground_frame = QFrame(self.centralBackground_frame)
         self.topBarBackground_frame.setObjectName("topBarBackground_frame")
@@ -225,6 +273,8 @@ class Ui_MainWindow(object):
         self.topBarBackground_layout.setContentsMargins(0, 0, 0, 0)
         self.topBarBackground_layout.setSpacing(0)
 
+        # LEFT BOX UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.topBarLeftBox_frame = QFrame(self.topBarBackground_frame)
         self.topBarLeftBox_frame.setObjectName("topBarLeftBox_frame")
         topBarLeftBox_sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
@@ -239,6 +289,8 @@ class Ui_MainWindow(object):
         self.topBarLeftBox_layout.setContentsMargins(0, 0, 0, 0)
         self.topBarLeftBox_layout.setSpacing(0)
 
+        # LEFT BOX TITLE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.lbl_topBarLeftBoxTitle = QLabel(self.topBarLeftBox_frame)
         self.lbl_topBarLeftBoxTitle.setObjectName("lbl_topBarLeftBoxTitle")
         self.lbl_topBarLeftBoxTitle.setText("OMEXOM NANCY  |  Bureau d'Etudes - Base de données")
@@ -252,6 +304,8 @@ class Ui_MainWindow(object):
 
         self.topBarLeftBox_layout.addWidget(self.lbl_topBarLeftBoxTitle)
 
+        # RIGHT BOX UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.topBarRightBox_frame = QFrame(self.topBarBackground_frame)
         self.topBarRightBox_frame.setObjectName("topBarRightBox_frame")
         self.topBarRightBox_frame.setMinimumSize(QSize(0, 28))
@@ -262,6 +316,8 @@ class Ui_MainWindow(object):
         self.topBarRightBox_layout.setContentsMargins(0, 0, 0, 0)
         self.topBarRightBox_layout.setSpacing(5)
 
+        # RIGHT BOX : BUTTONS UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         topBar_buttons = ["minimize", "close"]
         for button in topBar_buttons:
             self.button = QPushButton(self.topBarRightBox_frame)
@@ -280,12 +336,84 @@ class Ui_MainWindow(object):
 
             self.topBarRightBox_layout.addWidget(self.button)
 
+    # CONTENT UI
+    # /////////////////////////////////////////////////////////////////////////////////////////////////////
     def content_ui(self):
         self.contentBackground_frame = QFrame(self.centralBackground_frame)
         self.contentBackground_frame.setObjectName("contentBackground_frame")
 
         self.central_layout.addWidget(self.contentBackground_frame)
 
+        self.contentBackground_layout = QVBoxLayout(self.contentBackground_frame)
+        self.contentBackground_layout.setContentsMargins(0, 0, 0, 0)
+        self.contentBackground_layout.setSpacing(0)
+
+        self.content_frame = QFrame(self.contentBackground_frame)
+        self.content_frame.setObjectName("content_frame")
+
+        self.contentBackground_layout.addWidget(self.content_frame)
+
+        self.content_layout = QHBoxLayout(self.content_frame)
+        self.content_layout.setContentsMargins(0, 0, 0, 0)
+        self.content_layout.setSpacing(0)
+
+        # PAGE CONTAINER & STACKEDWIDGET UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.container_frame = QFrame(self.content_frame)
+        self.container_frame.setObjectName("container_frame")
+
+        self.content_layout.addWidget(self.container_frame)
+
+        self.container_layout = QVBoxLayout(self.container_frame)
+        self.container_layout.setContentsMargins(0, 0, 0 ,0)
+        self.container_layout.setSpacing(0)
+
+        self.stackedWidget = QStackedWidget(self.container_frame)
+        self.stackedWidget.setObjectName("stackedWidget")
+
+        self.container_layout.addWidget(self.stackedWidget)
+
+        # INSERTING HOME PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.home = Ui_home()
+        self.stackedWidget.addWidget(self.home)
+
+        # INSERTING PROJECT PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.project = Ui_project()
+        self.stackedWidget.addWidget(self.project)
+
+        # INSERTING COMPANY PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.company = Ui_company()
+        self.stackedWidget.addWidget(self.company)
+
+        # INSERTING PLAN PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.plan = Ui_plan()
+        self.stackedWidget.addWidget(self.plan)
+
+        # INSERTING DISPATCH PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.dispatch = Ui_dispatch()
+        self.stackedWidget.addWidget(self.dispatch)
+
+        # INSERTING ARCHIVE PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.archive = Ui_archive()
+        self.stackedWidget.addWidget(self.archive)
+
+        # INSERTING SETTINGS PAGE UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.settings = Ui_settings()
+        self.stackedWidget.addWidget(self.settings)
+
+        # DEFAULT CURRENT INDEX OF STACKEDWIDGET
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
+        self.stackedWidget.setCurrentIndex(0)
+
+    # BOTTOM BAR UI
+    # /////////////////////////////////////////////////////////////////////////////////////////////////////
     def bottomBar_ui(self):
         self.bottomBarBackground_frame = QFrame(self.centralBackground_frame)
         self.bottomBarBackground_frame.setObjectName("bottomBarBackground_frame")
@@ -298,6 +426,8 @@ class Ui_MainWindow(object):
         self.bottomBarBackground_layout.setContentsMargins(0, 0, 0, 0)
         self.bottomBarBackground_layout.setSpacing(0)
 
+        # BOTTOM BAR - LABELS UI
+        # /////////////////////////////////////////////////////////////////////////////////////////////////////
         self.lbl_credits = QLabel(self.bottomBarBackground_frame)
         self.lbl_credits.setText("By: G. BARTHELEMY")
         self.lbl_credits.setObjectName("lbl_credits")

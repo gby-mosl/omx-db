@@ -1,0 +1,21 @@
+#companyPage_frame,
+#company_frame,
+#companyList_frame,
+#companyForm_frame,
+#companyCityInfo_frame,
+#companyPostCode_frame,
+#companyCity_frame,
+#contact_frame,
+#contactList_frame,
+#contactForm_frame,
+#contactStatus_frame,
+#contactType_frame
+{
+  background-color: $light-grey;
+}
+
+#company_frame,
+#contact_frame {
+  border: 1px solid lighten($light-grey, 10%);
+  border-radius: 10px;
+}

@@ -17,10 +17,14 @@ INSERT INTO companies (name, address, post_code, city) VALUE ('OMEXOM Nancy', '2
 
 CREATE TABLE people (
     id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    title VARCHAR(10),
     lastname VARCHAR(255) NOT NULL,
     firstname VARCHAR(255) NOT NULL,
     company_id INT NOT NULL,
     job VARCHAR(255),
+    phone_number VARCHAR(20),
+    gsm  VARCHAR(20),
+    email VARCHAR(255),
     status BOOL DEFAULT TRUE,
     FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=INNODB;

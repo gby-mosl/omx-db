@@ -14,21 +14,25 @@
 }
 
 #lbl_titleApp {
+  background-color: $dark-grey;
   font-size: 12pt;
   color: $white;
 }
 
 #lbl_subtitleApp {
-  font-size: 8pt;
+  background-color: $dark-grey;
+  font-size: 12pt;
   color: $white;
 }
 
 #btn_toggle {
+  color: $white;
   background-color: $dark-grey;
   background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/icon_menu.png");
   background-repeat: no-repeat;
   background-position: left center;
   border: none;
+  border-radius: 0px;
   border-left: 20px solid transparent;
   text-align: left;
   padding-left: 44px;
@@ -45,6 +49,7 @@
 
 #topMenu_frame {
   & QPushButton {
+    color: $white;
     background-color: $dark-grey;
     background-repeat: no-repeat;
     background-position: left center;
@@ -86,6 +91,7 @@
 }
 
 #btn_settings {
+  color: $white;
   background-image: url("/Users/guillaume/Code/omx_db/src/main/resources/base/icons/images/icon_settings.png");
   background-repeat: no-repeat;
   background-position: left center;
